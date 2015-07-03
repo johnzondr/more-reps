@@ -7,9 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container">
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
+
+
+
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -40,6 +42,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<div class="container">
 
 <% if notice.present? %>
   <p class="alert alert-info"><%= notice %></p>
@@ -51,10 +54,12 @@
 
 <%= yield %>
 
-<div class="container">
-<p> Teachers </p>
-<%= link_to 'Teach a course', new_instructor_course_path %>
-
+<footer class="footer">
+  <div class = "container">
+    <p> Teachers </p>
+    <%= link_to 'Teach a course', new_instructor_course_path %>
+  </div>
 </div>
+
 </body>
 </html>
