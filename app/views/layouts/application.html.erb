@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="container">
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -18,7 +18,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Flixter</a>
+      <%= link_to 'Flixter', root_path, :class => 'navbar-brand' %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,13 +40,14 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+
 <% if notice.present? %>
   <p class="alert alert-info"><%= notice %></p>
 <% end %>
 <% if alert.present? %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-
+</div>
 <%= yield %>
 
 </body>
