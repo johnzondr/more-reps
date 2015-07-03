@@ -48,7 +48,13 @@
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
 </div>
+
 <%= yield %>
 
+<div class="container">
+<p> Teachers </p>
+<%= link_to 'Teach a course', new_instructor_course_path %>
+
+</div>
 </body>
 </html>
