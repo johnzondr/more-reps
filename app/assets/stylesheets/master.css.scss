@@ -27,3 +27,12 @@ body {
   min-height: 60px;
   background-color: #f5f5f5;
 }
+
+
+.field_with_errors {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding:8px;
+  margin:10px;
+}
