@@ -10,3 +10,14 @@
 <% if current_user && current_user == @course.user %>
 	<%= link_to 'Administer', instructor_course_path(@course), :class => 'btn btn-danger btn-large' %>
 <% end %>
+
+<% @course.sections.each do |section| %>
+		
+		<%= section.title %>
+		<% section.lessons.each do |lesson| %>
+			<%= link_to lesson_path(lesson) do %>
+				<%= lesson.title %> - <%= lesson.subtitle %>
+			<% end %>
+		<% end %>
+	
+<% end %>
