@@ -2,6 +2,7 @@
 
 <% @courses.each do |course| %>
 	<h2><%= link_to course.title, course_path(course) %></h2>
+	<%= image_tag course.image %>
 	<%= course.description %>
 	<%= link_to 'More Details', course_path(course), :class => 'btn btn-primary btn-large' %>
 

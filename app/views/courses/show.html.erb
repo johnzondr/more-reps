@@ -1,5 +1,6 @@
 <h1>Details for the course</h1>
 <%= @course.title %>
+<%= image_tag @course.image, :class =>'img-responsive' %>
 
 <span class = "label label-default">
 <%= number_to_currency @course.cost %>
