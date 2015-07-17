@@ -12,6 +12,12 @@
 	<%= link_to 'Administer', instructor_course_path(@course), :class => 'btn btn-danger btn-large' %>
 <% end %>
 
+<% if current_user && current_user.enrolled_in?(@course) %>
+	<p>You are enrolled</p>
+<% else %>
+	<%= link_to 'Enroll', course_enrollments_path(@course), :class => 'btn btn-primary', :method => :post %>
+<% end %>
+
 <% @course.sections.each do |section| %>
 		
 		<%= section.title %>
